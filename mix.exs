@@ -1,13 +1,13 @@
 defmodule PhoenixStorybook.MixProject do
   use Mix.Project
 
-  @version "0.8.2"
+  @version "0.8.2-forked"
 
   def project do
     [
       app: :phoenix_storybook,
       version: @version,
-      elixir: "~> 1.13",
+      elixir: "~> 1.19.0-rc.0",
       start_permanent: Mix.env() == :prod,
       elixirc_paths: elixirc_paths(Mix.env()),
       name: "phoenix_storybook",
@@ -18,11 +18,6 @@ defmodule PhoenixStorybook.MixProject do
       package: package(),
       docs: docs(),
       test_coverage: [tool: ExCoveralls, export: "excoveralls"],
-      preferred_cli_env: [
-        coveralls: :test,
-        "coveralls.lcov": :test,
-        coverage: :test
-      ],
       dialyzer: [
         plt_add_apps: [:mix],
         plt_local_path: ".plts",
@@ -31,6 +26,10 @@ defmodule PhoenixStorybook.MixProject do
       ],
       prune_code_paths: false
     ]
+  end
+
+  def cli do
+    [preferred_envs: [coveralls: :test, "coveralls.lcov": :test, coverage: :test]]
   end
 
   # Run "mix help compile.app" to learn about applications.
@@ -47,8 +46,8 @@ defmodule PhoenixStorybook.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:phoenix, "~> 1.7.0"},
-      {:phoenix_live_view, "~> 1.0"},
+      {:phoenix, "~> 1.8.0-rc.3", override: true},
+      {:phoenix_live_view, "~> 1.1.0-rc.1"},
       {:phoenix_html_helpers, "~> 1.0"},
       {:phoenix_view, "~> 2.0"},
       {:makeup_eex, "~> 2.0.2"},
