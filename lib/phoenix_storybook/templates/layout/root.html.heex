@@ -4,6 +4,7 @@
   class="psb"
   phx-socket={live_socket_path(@conn)}
   data-color-mode={color_mode?(@conn)}
+  data-theme={color_mode?(@conn)}
 >
   <head>
     <meta charset="utf-8" />
@@ -70,7 +71,7 @@
     </style>
   </head>
 
-  <body class="psb psb-max-w-full psb-overflow-hidden psb-bg-white dark:psb-bg-slate-900">
+  <body class="psb psb:max-w-full psb:overflow-hidden psb:bg-white psb:dark:bg-slate-900">
     {@inner_content}
   </body>
 </html>
