@@ -362,7 +362,7 @@ defmodule PhoenixStorybook.StoryLive do
 
   defp render_content(t, assigns = %{tab: :source}) when t in [:component, :live_component] do
     ~H"""
-    <div class="psb psb:flex-1 psb:flex psb:flex-col psb:overflow-auto psb:max-h-full">
+    <div class="psb psb:bg-slate-800 psb:flex-1 psb:flex psb:flex-col psb:overflow-auto psb:max-h-full">
       {@story |> CodeRenderer.render_component_source() |> to_raw_html()}
     </div>
     """

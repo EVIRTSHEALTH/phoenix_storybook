@@ -426,8 +426,8 @@ defmodule PhoenixStorybook.Story.Playground do
 
   defp pre_class do
     """
-    psb highlight psb:bg-inherit! psb:p-2 psb:md:p-3 psb:border psb:border-slate-800 psb:text-xs psb:md:text-sm
-    psb:rounded-md psb:bg-slate-800 psb:whitespace-pre-wrap psb:break-normal
+    psb highlight psb:bg-slate-800! psb:p-2 psb:md:p-3 psb:border psb:border-slate-800 psb:text-xs psb:md:text-sm
+    psb:rounded-md psb:whitespace-pre-wrap psb:break-normal
     """
   end
 
@@ -485,7 +485,7 @@ defmodule PhoenixStorybook.Story.Playground do
                     <tr>
                       <td
                         colspan="5"
-                        class="psb psb:md:px-3 psb:md:px-6 psb:py-4 psb:text-md psb:md:text-lg psb:font-medium psb:text-gray-500 psb:sm:pl-6 psb:pt-2 psb:md:pb-6 psb:md:pt-4 psb:md:pb-12 psb:text-center"
+                        class="psb psb:sm:px-3 psb:md:px-6 psb:py-4 psb:text-md psb:md:text-lg psb:font-medium psb:text-gray-500 psb:sm:pl-6 psb:pt-2 psb:sm:pb-6 psb:md:pt-4 psb:md:pb-12 psb:text-center"
                       >
                         <.fa_icon
                           style={:duotone}
@@ -843,7 +843,7 @@ defmodule PhoenixStorybook.Story.Playground do
 
   defp type_badge(assigns = %{type: :string}) do
     ~H"""
-    <span class={"bg-slate-100 text-slate-800 #{type_badge_class()}"}>
+    <span class={"psb:bg-slate-100 psb:text-slate-800 #{type_badge_class()}"}>
       {type_label(@type)}
     </span>
     """
@@ -851,7 +851,7 @@ defmodule PhoenixStorybook.Story.Playground do
 
   defp type_badge(assigns = %{type: :atom}) do
     ~H"""
-    <span class={"bg-blue-100 text-blue-800 #{type_badge_class()}"}>
+    <span class={"psb:bg-blue-100 psb:text-blue-800 #{type_badge_class()}"}>
       {type_label(@type)}
     </span>
     """
@@ -859,7 +859,7 @@ defmodule PhoenixStorybook.Story.Playground do
 
   defp type_badge(assigns = %{type: :boolean}) do
     ~H"""
-    <span class={"bg-slate-500 text-white #{type_badge_class()}"}>
+    <span class={"psb:bg-slate-500 psb:text-white #{type_badge_class()}"}>
       {type_label(@type)}
     </span>
     """
@@ -867,7 +867,7 @@ defmodule PhoenixStorybook.Story.Playground do
 
   defp type_badge(assigns = %{type: :integer}) do
     ~H"""
-    <span class={"bg-green-100 text-green-800 #{type_badge_class()}"}>
+    <span class={"psb:bg-green-100 psb:text-green-800 #{type_badge_class()}"}>
       {type_label(@type)}
     </span>
     """
@@ -875,7 +875,7 @@ defmodule PhoenixStorybook.Story.Playground do
 
   defp type_badge(assigns = %{type: :float}) do
     ~H"""
-    <span class={"bg-teal-100 text-teal-800 #{type_badge_class()}"}>
+    <span class={"psb:bg-teal-100 psb:text-teal-800 #{type_badge_class()}"}>
       {type_label(@type)}
     </span>
     """
@@ -883,7 +883,7 @@ defmodule PhoenixStorybook.Story.Playground do
 
   defp type_badge(assigns = %{type: :map}) do
     ~H"""
-    <span class={"bg-fuchsia-100 text-fuchsia-800 #{type_badge_class()}"}>
+    <span class={"psb:bg-fuchsia-100 psb:text-fuchsia-800 #{type_badge_class()}"}>
       {type_label(@type)}
     </span>
     """
@@ -891,7 +891,7 @@ defmodule PhoenixStorybook.Story.Playground do
 
   defp type_badge(assigns = %{type: :list}) do
     ~H"""
-    <span class={"bg-purple-100 text-purple-800 #{type_badge_class()}"}>
+    <span class={"psb:bg-purple-100 psb:text-purple-800 #{type_badge_class()}"}>
       {type_label(@type)}
     </span>
     """
@@ -899,7 +899,7 @@ defmodule PhoenixStorybook.Story.Playground do
 
   defp type_badge(assigns = %{type: :slot}) do
     ~H"""
-    <span class={"bg-rose-100 text-rose-800 #{type_badge_class()}"}>
+    <span class={"psb:bg-rose-100 psb:text-rose-800 #{type_badge_class()}"}>
       {type_label(@type)}
     </span>
     """
@@ -907,7 +907,7 @@ defmodule PhoenixStorybook.Story.Playground do
 
   defp type_badge(assigns = %{type: _type}) do
     ~H"""
-    <span class={"bg-amber-100 text-amber-800 #{type_badge_class()}"}>
+    <span class={"psb:bg-amber-100 psb:text-amber-800 #{type_badge_class()}"}>
       {type_label(@type)}
     </span>
     """
@@ -935,7 +935,7 @@ defmodule PhoenixStorybook.Story.Playground do
   value: "[Multiple values]",
   disabled: true,
   class:
-    "psb form-input cursor-not-allowed block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-xs md:text-sm bg-gray-100 dark:bg-slate-800 border-gray-300 dark:border-slate-600 rounded-md dark:text-slate-500"
+    "psb form-input psb:cursor-not-allowed psb:block psb:w-full psb:shadow-sm psb:focus:ring-indigo-500 psb:focus:border-indigo-500 psb:text-xs psb:md:text-sm psb:bg-gray-100 psb:dark:bg-slate-800 psb:border-gray-300 psb:dark:border-slate-600 psb:rounded-md psb:dark:text-slate-500"
 )}|
 
           {:eval, value} ->
@@ -953,7 +953,7 @@ defmodule PhoenixStorybook.Story.Playground do
   value: inspect(@value),
   disabled: true,
   class:
-    "psb form-input cursor-not-allowed block w-full shadow-sm focus:ring-indigo-500 dark:focus:ring-sky-400 focus:border-indigo-500 dark:focus:border-sky-400 text-xs md:text-sm bg-gray-100 dark:bg-slate-800 border-gray-300 dark:border-slate-600 rounded-md dark:text-slate-500"
+    "psb form-input psb:cursor-not-allowed psb:block psb:w-full psb:shadow-sm psb:focus:ring-indigo-500 psb:dark:focus:ring-sky-400 psb:focus:border-indigo-500 psb:dark:focus:border-sky-400 psb:text-xs psb:md:text-sm psb:bg-gray-100 psb:dark:bg-slate-800 border-gray-300 psb:dark:border-slate-600 psb:rounded-md psb:dark:text-slate-500"
 )}|
     end
   end
@@ -963,22 +963,22 @@ defmodule PhoenixStorybook.Story.Playground do
       assign(assigns,
         bg_class:
           if(value,
-            do: "bg-indigo-600 dark:bg-sky-400",
-            else: "bg-gray-200 dark:bg-slate-700"
+            do: "psb:bg-indigo-600 psb:dark:bg-sky-400",
+            else: "psb:bg-gray-200 psb:dark:bg-slate-700"
           ),
-        translate_class: if(value, do: "translate-x-5", else: "translate-x-0")
+        translate_class: if(value, do: "psb:translate-x-5", else: "psb:translate-x-0")
       )
 
     ~H"""
     <button
       type="button"
       phx-click={on_toggle_click(@attr_id, @value)}
-      class={"psb #{@bg_class} relative inline-flex flex-shrink-0 p-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-sky-400"}
+      class={"psb #{@bg_class} psb:relative psb:inline-flex psb:flex-shrink-0 psb:p-0 psb:h-6 psb:w-11 psb:border-2 psb:border-transparent psb:rounded-full psb:cursor-pointer psb:transition-colors psb:ease-in-out psb:duration-200 psb:focus:outline-none psb:focus:ring-2 psb:focus:ring-offset-2 psb:focus:ring-indigo-500 psb:dark:focus:ring-sky-400"}
       phx-target={@myself}
       role="switch"
     >
       {hidden_input(@form, @attr_id, value: "#{@value}")}
-      <span class={"psb #{@translate_class} form-input p-0 border-0 pointer-events-none inline-block h-5 w-5 rounded-full bg-white psb-shadow transform ring-0 psb-transition ease-in-out duration-200"}>
+      <span class={"psb #{@translate_class} form-input psb:p-0 psb:border-0 psb:pointer-events-none psb:inline-block psb:h-5 psb:w-5 psb:rounded-full psb:bg-white psb:shadow psb:transform psb:ring-0 psb:transition psb:ease-in-out psb:duration-200"}>
       </span>
     </button>
     """
@@ -993,7 +993,7 @@ defmodule PhoenixStorybook.Story.Playground do
       value: @value,
       step: @step,
       class:
-        "psb form-input text-xs md:text-sm block w-full dark:text-slate-300 dark:bg-slate-700 shadow-sm focus:ring-indigo-500 dark:focus:ring-sky-400 focus:border-indigo-500 dark:focus:ring-sky-400 border-gray-300 dark:border-slate-600 rounded-md"
+        "psb form-input psb:text-xs psb:md:text-sm psb:block psb:w-full psb:dark:text-slate-300 psb:dark:bg-slate-700 psb:shadow-sm psb:focus:ring-indigo-500 psb:dark:focus:ring-sky-400 psb:focus:border-indigo-500 psb:dark:focus:ring-sky-400 psb:border-gray-300 psb:dark:border-slate-600 psb:rounded-md"
     )}
     """
   end
@@ -1007,7 +1007,7 @@ defmodule PhoenixStorybook.Story.Playground do
       min: @min,
       max: @max,
       class:
-        "psb form-input text-xs md:text-sm block w-full dark:text-slate-300 dark:bg-slate-700 shadow-sm focus:ring-indigo-500 dark:focus:ring-sky-400 focus:border-indigo-500 dark:focus:ring-sky-400 border-gray-300 dark:border-slate-600 rounded-md"
+        "psb form-input psb:text-xs psb:md:text-sm psb:block psb:w-full psb:dark:text-slate-300 psb:dark:bg-slate-700 psb:shadow-sm psb:focus:ring-indigo-500 psb:dark:focus:ring-sky-400 psb:focus:border-indigo-500 psb:dark:focus:ring-sky-400 psb:border-gray-300 psb:dark:border-slate-600 psb:rounded-md"
     )}
     """
   end
@@ -1017,7 +1017,7 @@ defmodule PhoenixStorybook.Story.Playground do
     {text_input(@form, @attr_id,
       value: @value,
       class:
-        "psb form-input block w-full dark:text-slate-300 dark:bg-slate-700 shadow-sm focus:ring-indigo-500 dark:focus:ring-sky-400 focus:border-indigo-500 dark:focus:ring-sky-400 border-gray-300 dark:border-slate-600 text-xs md:text-sm rounded-md"
+        "psb form-input psb:block psb:p-2 psb:w-full psb:dark:text-slate-300 psb:dark:bg-slate-700 psb:shadow-sm psb:focus:ring-indigo-500 psb:dark:focus:ring-sky-400 psb:focus:border-indigo-500 psb:dark:focus:ring-sky-400 psb:border-gray-300 psb:dark:border-slate-600 psb:text-xs psb:md:text-sm psb:rounded-md"
     )}
     """
   end
@@ -1037,7 +1037,7 @@ defmodule PhoenixStorybook.Story.Playground do
       value: @value,
       disabled: true,
       class:
-        "psb cursor-not-allowed bg-gray-100 form-input block w-full dark:text-slate-500 dark:bg-slate-800 shadow-sm focus:ring-indigo-500 dark:focus:ring-sky-400 focus:border-indigo-500 dark:focus:ring-sky-400 border-gray-300 dark:border-slate-600 text-xs md:text-sm rounded-md"
+        "psb psb:cursor-not-allowed psb:bg-gray-100 psb:form-input psb:block psb:w-full psb:dark:text-slate-500 psb:dark:bg-slate-800 psb:shadow-sm psb:focus:ring-indigo-500 psb:dark:focus:ring-sky-400 psb:focus:border-indigo-500 psb:dark:focus:ring-sky-400 psb:border-gray-300 psb:dark:border-slate-600 psb:text-xs psb:md:text-sm psb:rounded-md"
     )}
     """
   end
@@ -1049,7 +1049,7 @@ defmodule PhoenixStorybook.Story.Playground do
     {select(@form, @attr_id, @values,
       value: @value,
       class:
-        "psb form-select mt-1 block w-full dark:text-slate-300 dark:bg-slate-700 pl-3 pr-10 py-2 text-xs md:text-sm focus:outline-none focus:ring-indigo-500 dark:focus:ring-sky-400 focus:border-indigo-500 dark:focus:ring-sky-400 border-gray-300 dark:border-slate-600 rounded-md"
+        "psb form-select psb:mt-1 psb:block psb:w-full psb:dark:text-slate-300 psb:dark:bg-slate-700 psb:shadow-sm psb:pl-3 psb:pr-10 psb:py-2 psb:text-xs psb:md:text-sm psb:focus:outline-none psb:focus:ring-indigo-500 psb:dark:focus:ring-sky-400 psb:focus:border-indigo-500 psb:dark:focus:ring-sky-400 psb:border-gray-300 psb:dark:border-slate-600 psb:rounded-md"
     )}
     """
   end
