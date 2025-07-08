@@ -212,7 +212,7 @@ defmodule PhoenixStorybook.StoryLive do
               <span id={"story-icon-#{story_id(@story)}"} phx-update="ignore">
                 <.user_icon
                   icon={icon}
-                  class="psb:pr-2 psb:text-indigo-600 psb:dark:text-sky-400 psb:size-10"
+                  class="psb:pr-2 psb:text-indigo-600 psb:dark:text-sky-400 psb:h-8! psb:w-8!"
                   fa_plan={@fa_plan}
                 />
               </span>
