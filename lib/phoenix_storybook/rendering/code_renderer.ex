@@ -144,7 +144,7 @@ defmodule PhoenixStorybook.Rendering.CodeRenderer do
 
   defp pre_class do
     """
-    psb highlight psb:bg-slate-800! psb:p-2 psb:md:p-3 psb:border psb:border-slate-800 psb:text-xs psb:md:text-sm
+    psb highlight psb:bg-zinc-800! psb:p-2 psb:md:p-3 psb:border psb:border-slate-800 psb:text-xs psb:md:text-sm
     psb:rounded-md psb:whitespace-pre-wrap psb:break-normal
     """
   end

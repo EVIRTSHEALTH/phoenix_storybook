@@ -65,13 +65,13 @@
 }
 
 .psb-sandbox .psb-welcome-page code.inline {
-  @apply psb:border psb:bg-slate-100 psb:dark:bg-slate-800 psb:border-slate-200 psb:dark:border-slate-600;
+  @apply psb:border psb:bg-slate-100 psb:dark:bg-zinc-800 psb:border-slate-200 psb:dark:border-slate-600;
   @apply psb:rounded-md psb:p-0.5 psb:m-0.5 psb:text-indigo-700 psb:dark:text-sky-400;
   @apply psb:font-mono psb:text-sm;
 }
 
 .psb-sandbox .psb-welcome-page pre {
-  @apply psb:bg-slate-800 psb:dark:bg-slate-800 psb:border-slate-100 psb:dark:border-slate-600;
+  @apply psb:bg-zinc-800 psb:dark:bg-zinc-800 psb:border-slate-100 psb:dark:border-slate-600;
   @apply psb:rounded-lg psb:px-4 psb:py-2 psb:my-4 psb:whitespace-pre-wrap psb:break-normal;
 }
 
@@ -136,13 +136,13 @@
 }
 
 .psb-doc pre code {
-  @apply psb:border psb:bg-slate-800 psb:dark:bg-slate-800 psb:border-slate-100 psb:dark:border-slate-600;
+  @apply psb:border psb:bg-zinc-800 psb:dark:bg-zinc-800 psb:border-slate-100 psb:dark:border-slate-600;
   @apply psb:rounded-md psb:px-4 psb:py-4 psb:text-gray-300 psb:text-xs psb:md:text-sm psb:block;
   @apply psb:overflow-x-auto;
 }
 
 .psb-doc code.inline {
-  @apply psb:border psb:bg-slate-100 psb:dark:bg-slate-800 psb:border-slate-200 psb:dark:border-slate-600;
+  @apply psb:border psb:bg-slate-100 psb:dark:bg-zinc-800 psb:border-slate-200 psb:dark:border-slate-600;
   @apply psb:rounded-md psb:p-0.5 psb:m-0.5 psb:text-indigo-700 psb:dark:text-sky-400 psb:text-sm;
 }
 

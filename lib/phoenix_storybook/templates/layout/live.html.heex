@@ -34,7 +34,7 @@
 
             <div
               id="psb-colormode-dropdown"
-              class="psb psb:hidden psb:origin-top-right psb:absolute psb:right-0 psb:top-6 psb:mt-2 psb:w-52 psb:rounded-md psb:shadow-lg psb:bg-white psb:dark:bg-slate-800 psb:ring-1 psb:ring-black psb:ring-opacity-5 psb:divide-y psb:divide-gray-100 psb:dark:divide-slate-600 psb:focus:outline-none psb:justify-start "
+              class="psb psb:hidden psb:origin-top-right psb:absolute psb:right-0 psb:top-6 psb:mt-2 psb:w-52 psb:rounded-md psb:shadow-lg psb:bg-white psb:dark:bg-zinc-800 psb:ring-1 psb:ring-black psb:ring-opacity-5 psb:divide-y psb:divide-gray-100 psb:dark:divide-slate-600 psb:focus:outline-none psb:justify-start "
               phx-click-away={
                 JS.hide(to: "#psb-colormode-dropdown", transition: hide_dropdown_transition())
               }
@@ -61,7 +61,7 @@
                     )
                     |> JS.dispatch("phx:set-theme", detail: %{theme: "system"})
                   }
-                  class="psb psb:text-gray-700 psb:dark:text-slate-300 psb:hover:bg-gray-100 psb:dark:hover:bg-slate-800 psb:block psb:px-4 psb:py-2 psb:text-sm psb:cursor-pointer psb:text-left"
+                  class="psb psb:text-gray-700 psb:dark:text-slate-300 psb:hover:bg-gray-100 psb:dark:hover:bg-zinc-800 psb:block psb:px-4 psb:py-2 psb:text-sm psb:cursor-pointer psb:text-left"
                 >
                   <%= if @selected_color_mode == mode do %>
                     <span class="psb psb:text-indigo-600 psb:dark:text-sky-400">
@@ -106,7 +106,7 @@
 
             <div
               id="theme-dropdown"
-              class="psb psb:hidden psb:origin-top-right psb:absolute psb:right-0 psb:top-6 psb:mt-2 psb:w-52 psb:rounded-md psb:shadow-lg psb:bg-white psb:dark:bg-slate-800 psb:ring-1 psb:ring-black psb:ring-opacity-5 psb:divide-y psb:divide-gray-100 psb:dark:divide-slate-600 psb:focus:outline-none"
+              class="psb psb:hidden psb:origin-top-right psb:absolute psb:right-0 psb:top-6 psb:mt-2 psb:w-52 psb:rounded-md psb:shadow-lg psb:bg-white psb:dark:bg-zinc-800 psb:ring-1 psb:ring-black psb:ring-opacity-5 psb:divide-y psb:divide-gray-100 psb:dark:divide-slate-600 psb:focus:outline-none"
               phx-click-away={
                 JS.hide(to: "#theme-dropdown", transition: hide_dropdown_transition())
               }
@@ -127,7 +127,7 @@
                       )
                     }
                     }
-                    class="psb theme psb:text-gray-700 psb:dark:text-gray-500 psb:hover:bg-gray-100 psb:dark:hover:bg-slate-800 psb:block psb:px-4 psb:py-2 psb:text-sm psb:cursor-pointer psb:text-left"
+                    class="psb theme psb:text-gray-700 psb:dark:text-gray-500 psb:hover:bg-gray-100 psb:dark:hover:bg-zinc-800 psb:block psb:px-4 psb:py-2 psb:text-sm psb:cursor-pointer psb:text-left"
                   >
                     <%= if assigns[:theme] == theme do %>
                       <span class="psb psb:text-indigo-600 psb:dark:text-gray-200">

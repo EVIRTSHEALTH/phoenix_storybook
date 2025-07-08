@@ -191,7 +191,7 @@ defmodule PhoenixStorybook.StoryLive do
         <.fa_icon style={:duotone} name="bomb" plan={@fa_plan} /> {@story_load_error}
       </h1>
 
-      <div class="psb psb:border psb:rounded-md psb:border-slate-100 psb:bg-slate-800 psb:p-4 psb:overflow-x-scroll">
+      <div class="psb psb:border psb:rounded-md psb:border-slate-100 psb:bg-zinc-800 psb:p-4 psb:overflow-x-scroll">
         <pre class="psb psb:text-xs psb:md:text-sm psb:leading-loose psb:text-red-500"><%= @story_load_exception %></pre>
       </div>
     </div>
@@ -212,7 +212,7 @@ defmodule PhoenixStorybook.StoryLive do
               <span id={"story-icon-#{story_id(@story)}"} phx-update="ignore">
                 <.user_icon
                   icon={icon}
-                  class="psb:pr-2 psb:text-indigo-600 psb:dark:text-sky-400"
+                  class="psb:pr-2 psb:text-indigo-600 psb:dark:text-sky-400 psb:size-10"
                   fa_plan={@fa_plan}
                 />
               </span>
@@ -289,12 +289,12 @@ defmodule PhoenixStorybook.StoryLive do
         {select(f, :tab, navigation_select_options(@tabs),
           "phx-change": "psb-set-tab",
           class:
-            "psb form-select psb:dark:bg-slate-800 psb:text-gray-600 psb:dark:text-slate-300 psb:border psb:border-gray-300 psb:dark:border-slate-600 psb:w-full psb:pl-3 psb:pr-10 psb:py-1 psb:text-base psb:focus:outline-none psb:focus:ring-indigo-600 psb:dark:focus:ring-sky-400 psb:focus:border-indigo-600 psb:dark:focus:border-sky-400 psb:sm:text-sm psb:rounded-md",
+            "psb form-select psb:dark:bg-zinc-800 psb:text-gray-600 psb:dark:text-slate-300 psb:border psb:border-gray-300 psb:dark:border-slate-600 psb:w-full psb:pl-3 psb:pr-10 psb:py-1 psb:text-base psb:focus:outline-none psb:focus:ring-indigo-600 psb:dark:focus:ring-sky-400 psb:focus:border-indigo-600 psb:dark:focus:border-sky-400 psb:sm:text-sm psb:rounded-md",
           value: @tab
         )}
       </.form>
       <!-- :lg+ version of navigation tabs -->
-      <nav class="psb story-tabs psb:hidden psb:lg:flex psb:rounded-lg psb:border psb:border-gray-300 psb:dark:border-slate-600 psb:bg-slate-100 psb:dark:bg-slate-900 psb:hover:bg-slate-200 psb:dark:hover:bg-slate-800 psb:h-10 psb:text-sm psb:font-medium">
+      <nav class="psb story-tabs psb:hidden psb:lg:flex psb:rounded-lg psb:border psb:border-gray-300 psb:dark:border-slate-600 psb:bg-slate-100 psb:dark:bg-slate-900 psb:hover:bg-slate-200 psb:dark:hover:bg-zinc-800 psb:h-10 psb:text-sm psb:font-medium">
         <%= for tab <- @tabs do %>
           <% {tab_id, tab_label} = {elem(tab, 0), elem(tab, 1)} %>
           <a
@@ -362,7 +362,7 @@ defmodule PhoenixStorybook.StoryLive do
 
   defp render_content(t, assigns = %{tab: :source}) when t in [:component, :live_component] do
     ~H"""
-    <div class="psb psb:bg-slate-800 psb:flex-1 psb:flex psb:flex-col psb:overflow-auto psb:max-h-full">
+    <div class="psb psb:bg-zinc-800 psb:flex-1 psb:flex psb:flex-col psb:overflow-auto psb:max-h-full">
       {@story |> CodeRenderer.render_component_source() |> to_raw_html()}
     </div>
     """

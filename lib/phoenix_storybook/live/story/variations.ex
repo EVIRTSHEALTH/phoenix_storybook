@@ -86,7 +86,7 @@ defmodule PhoenixStorybook.Story.Variations do
           <div
             id={"#{anchor_id(variation)}-component"}
             class={[
-              "psb psb:border psb:dark:bg-slate-800 psb:border-slate-100 psb:dark:border-slate-600 psb:rounded-md psb:col-span-5 psb:mb-4 psb:lg:mb-0 psb:flex psb:items-center psb:justify-center psb:p-2 psb:bg-white psb:shadow-sm",
+              "psb psb:border psb:dark:bg-zinc-800 psb:border-slate-100 psb:dark:border-slate-600 psb:rounded-md psb:col-span-5 psb:mb-4 psb:lg:mb-0 psb:flex psb:items-center psb:justify-center psb:p-2 psb:bg-white psb:shadow-sm",
               component_layout_class(@story)
             ]}
           >
@@ -133,7 +133,7 @@ defmodule PhoenixStorybook.Story.Variations do
           <div
             id={"#{anchor_id(variation)}-code"}
             class={[
-              "psb psb:border psb:border-slate-100 psb:dark:border-slate-600 psb:bg-slate-800 psb:rounded-md psb:col-span-5 psb:group psb:relative psb:shadow-sm psb:flex psb:flex-col psb:justify-center",
+              "psb psb:border psb:border-slate-100 psb:dark:border-slate-600 psb:bg-zinc-800 psb:rounded-md psb:col-span-5 psb:group psb:relative psb:shadow-sm psb:flex psb:flex-col psb:justify-center",
               code_layout_class(@story)
             ]}
           >
