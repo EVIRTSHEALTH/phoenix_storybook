@@ -47,7 +47,7 @@ defmodule PhoenixStorybook.MixProject do
   defp deps do
     [
       {:phoenix, "~> 1.8.0-rc.3"},
-      {:phoenix_live_view, "~> 1.1.0-rc.1"},
+      {:phoenix_live_view, "~> 1.1.0-rc.3"},
       {:phoenix_html_helpers, "~> 1.0"},
       {:phoenix_view, "~> 2.0"},
       {:makeup_eex, "~> 2.0.2"},
