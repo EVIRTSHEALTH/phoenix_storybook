@@ -46,8 +46,8 @@ defmodule PhoenixStorybook.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:phoenix, "~> 1.8.0-rc.3"},
-      {:phoenix_live_view, "~> 1.1.0-rc.3"},
+      {:phoenix, "~> 1.8.0-rc.4"},
+      {:phoenix_live_view, "~> 1.1.2"},
       {:phoenix_html_helpers, "~> 1.0"},
       {:phoenix_view, "~> 2.0"},
       {:makeup_eex, "~> 2.0.2"},
@@ -69,7 +69,7 @@ defmodule PhoenixStorybook.MixProject do
     [
       main: "PhoenixStorybook",
       source_ref: "v#{@version}",
-      source_url: "https://github.com/phenixdigital/phoenix_storybook",
+      source_url: "https://github.com/EVIRTSHEALTH/phoenix_storybook",
       extra_section: "GUIDES",
       extras: extras(),
       nest_modules_by_prefix: [PhoenixStorybook]
@@ -94,7 +94,7 @@ defmodule PhoenixStorybook.MixProject do
       files:
         ~w(mix.exs priv lib guides README.md LICENSE.md CHANGELOG.md CONTRIBUTING.md .formatter.exs),
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/phenixdigital/phoenix_storybook"}
+      links: %{"GitHub" => "https://github.com/EVIRTSHEALTH/phoenix_storybook"}
     ]
   end
 
