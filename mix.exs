@@ -46,8 +46,8 @@ defmodule PhoenixStorybook.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:phoenix, "~> 1.8.0-rc.4"},
-      {:phoenix_live_view, "~> 1.1.2"},
+      {:phoenix, "~> 1.8.0"},
+      {:phoenix_live_view, "~> 1.1"},
       {:phoenix_html_helpers, "~> 1.0"},
       {:phoenix_view, "~> 2.0"},
       {:makeup_eex, "~> 2.0.2"},
