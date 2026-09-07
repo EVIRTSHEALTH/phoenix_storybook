@@ -23,8 +23,8 @@ Phoenix components.
 - Browse your component's documentation, with their supported attributes.
 - Learn how components behave by using an interactive playground.
 
-![screenshot](https://raw.githubusercontent.com/phenixdigital/phoenix_storybook/refs/heads/main/screenshots/screenshot-01.jpg)
-![screenshot](https://raw.githubusercontent.com/phenixdigital/phoenix_storybook/refs/heads/main/screenshots/screenshot-02.jpg)
+![screenshot](https://raw.githubusercontent.com/phenixdigital/phoenix_storybook/main/screenshots/screenshot-01.jpg)
+![screenshot](https://raw.githubusercontent.com/phenixdigital/phoenix_storybook/main/screenshots/screenshot-02.jpg)
 
 ## How does it work?
 
