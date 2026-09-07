@@ -120,6 +120,10 @@ defmodule MyAppWeb.Storybook do
     # Recommended value includes `/blob/<branch>` (GitHub) or `/-/blob/<branch>` (GitLab).
     source_permalink_base_url: "https://github.com/my-org/my-app/blob/main",
 
+    # Optional filesystem root used to derive paths for source permalinks. This is useful when
+    # the release working directory does not include the repository name (for example `/app`).
+    source_permalink_root: "/app",
+
     # Custom storybook title. Default is "Phoenix Storybook".
     title: "My Storybook",
 

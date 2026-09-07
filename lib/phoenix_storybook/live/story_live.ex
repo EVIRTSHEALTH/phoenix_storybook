@@ -578,6 +578,7 @@ defmodule PhoenixStorybook.StoryLive do
     selected_source_file = selected_source_file(assigns.story, assigns[:source_file])
     source = rendered_story_source(assigns.story, extra_sources, selected_source_file)
     content_path = assigns.backend_module.config(:content_path, nil)
+    source_permalink_root = assigns.backend_module.config(:source_permalink_root, nil)
 
     source_permalink_url =
       source_permalink_url(
@@ -585,7 +586,8 @@ defmodule PhoenixStorybook.StoryLive do
         assigns.story,
         selected_source_file,
         extra_sources_file_paths,
-        content_path
+        content_path,
+        source_permalink_root
       )
 
     editor_url = editor_url(assigns.story, selected_source_file, extra_sources_file_paths)
@@ -674,7 +676,8 @@ defmodule PhoenixStorybook.StoryLive do
          _story,
          _selected_source_file,
          _extra_sources_file_paths,
-         _content_path
+         _content_path,
+         _source_permalink_root
        ),
        do: nil
 
@@ -683,7 +686,8 @@ defmodule PhoenixStorybook.StoryLive do
          _story,
          _selected_source_file,
          _extra_sources_file_paths,
-         _content_path
+         _content_path,
+         _source_permalink_root
        ),
        do: nil
 
@@ -692,7 +696,8 @@ defmodule PhoenixStorybook.StoryLive do
          story,
          selected_source_file,
          extra_sources_file_paths,
-         content_path
+         content_path,
+         source_permalink_root
        ) do
     normalized_base_url = normalize_source_permalink_base_url(base_url)
 
@@ -701,7 +706,7 @@ defmodule PhoenixStorybook.StoryLive do
 
     story
     |> selected_source_file_path(selected_source_file, extra_sources_file_paths)
-    |> relative_source_file_path(normalized_base_url, content_path)
+    |> relative_source_file_path(normalized_base_url, content_path, source_permalink_root)
     |> case do
       nil ->
         nil
@@ -765,14 +770,26 @@ defmodule PhoenixStorybook.StoryLive do
     end
   end
 
-  defp relative_source_file_path(nil, _normalized_base_url, _content_path), do: nil
+  defp relative_source_file_path(
+         nil,
+         _normalized_base_url,
+         _content_path,
+         _source_permalink_root
+       ),
+       do: nil
 
-  defp relative_source_file_path(source_file_path, normalized_base_url, content_path) do
+  defp relative_source_file_path(
+         source_file_path,
+         normalized_base_url,
+         content_path,
+         source_permalink_root
+       ) do
     source_file_path = to_string(source_file_path)
 
     relative_path =
       if Path.type(source_file_path) == :absolute do
-        source_file_path_from_repo_name(source_file_path, normalized_base_url) ||
+        source_file_path_from_root(source_file_path, source_permalink_root) ||
+          source_file_path_from_repo_name(source_file_path, normalized_base_url) ||
           source_file_path_from_content_path(source_file_path, content_path)
       else
         source_file_path
@@ -840,6 +857,19 @@ defmodule PhoenixStorybook.StoryLive do
       else
         relative_path
       end
+    end
+  end
+
+  defp source_file_path_from_root(_source_file_path, nil), do: nil
+
+  defp source_file_path_from_root(source_file_path, source_permalink_root) do
+    relative_path =
+      Path.relative_to(source_file_path, Path.expand(to_string(source_permalink_root)))
+
+    if Path.type(relative_path) == :absolute or String.starts_with?(relative_path, "..") do
+      nil
+    else
+      relative_path
     end
   end
 
